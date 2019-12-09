@@ -1,6 +1,8 @@
 // Copyright 2018 Your Name <your_email>
 
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+#pragma once
 
-#endif // INCLUDE_HEADER_HPP_
+#include <thread>
+#include <boost/log/trivial.hpp>
+#include <picosha2.h>
+
