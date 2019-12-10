@@ -38,7 +38,7 @@ find_package(Boost CONFIG REQUIRED system log)
 add_library(template STATIC
         # enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-        )
+        include/picosha2.h)
 
 #add_executable(template
 # enum your files and delete this comment
