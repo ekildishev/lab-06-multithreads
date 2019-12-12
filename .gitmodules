@@ -1,10 +1,9 @@
 [submodule "tools/polly"]
  	path = tools/polly
  	url = https://github.com/cpp-pm/polly
- [submodule "tools/gate"]
+[submodule "tools/gate"]
  	path = tools/gate
  	url = https://github.com/cpp-pm/gate
-
-[submodule "include/picosha2"]
-	path = include/picosha2
+[submodule "include/PicoSHA2"]
+	path = include/PicoSHA2
 	url = https://github.com/okdshin/PicoSHA2
