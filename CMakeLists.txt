@@ -31,14 +31,14 @@ find_package(GTest CONFIG REQUIRED)
 #PUBLIC C:/.hunter/_Base/9a3594a/8fd1943/2c875e7/Install/include/boost/filesystem)
 #target_link_directories(template
 #PUBLIC C:/.hunter/_Base/9a3594a/8fd1943/2c875e7/Install/include/boost/filesystem)
-hunter_add_package(Boost COMPONENTS system log)
-find_package(Boost CONFIG REQUIRED system log)
+hunter_add_package(Boost COMPONENTS system log thread filesystem)
+find_package(Boost CONFIG REQUIRED system log log_setup thread filesystem)
 
 # TODO: change template word to project name and delete this comment
-add_library(template STATIC
+add_executable(template
         # enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-        include/picosha2.h)
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/hash.cpp
+        include/PicoSHA2/picosha2.h sources/main.cpp)
 
 #add_executable(template
 # enum your files and delete this comment
@@ -65,10 +65,13 @@ target_include_directories(tests
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         )
 # TODO: change template word to project name and delete this comment
-target_link_libraries(tests GTest::main template)
+#target_link_libraries(tests GTest::main template)
 target_link_libraries(template
-        Boost::system
+        Boost::log_setup
         Boost::log
+        Boost::thread
+        Boost::filesystem
+        Boost::system
         )
 
 

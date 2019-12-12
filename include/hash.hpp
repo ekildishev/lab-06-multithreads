@@ -4,5 +4,9 @@
 
 #include <thread>
 #include <boost/log/trivial.hpp>
-#include <picosha2.h>
+#include <PicoSHA2/picosha2.h>
 
+struct Hash{
+  const std::string correctString = "0000";
+  void work();
+};
