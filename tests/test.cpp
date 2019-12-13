@@ -1,8 +1,5 @@
-// Copyright 2018 Your Name <your_email>
+#include <iostream>
 
-#include <gtest/gtest.h>
-#include "hash.hpp"
-
-TEST(Example, EmptyTest) {
-    EXPECT_TRUE(true);
+int main() {
+  return 0;
 }
