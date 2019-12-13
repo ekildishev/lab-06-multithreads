@@ -18,6 +18,10 @@ jobs:
     - name: "tests"
       script:
         - docker run -t -v $(pwd):/var/builder/ -w /var/builder --entrypoint ./scripts/tests.sh $DOCKER_IMAGE
+    - name: "compile"
+      script:
+        - chmod 755 scripts/*.sh
+        - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/compile.sh
 
 
 notifications:
