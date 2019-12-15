@@ -4,7 +4,7 @@
 #include <iostream>
 
 void Hash::work() {
-  for (unsigned int i = 0; i < 200000; ++i) {
+  for (unsigned int i = 0; i < 1000000; ++i) {
     std::string attemptString(std::to_string(rand()) + std::to_string(rand()) +
                               std::to_string(rand()) +
                               std::to_string(rand()));  // вектор
